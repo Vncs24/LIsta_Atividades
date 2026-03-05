@@ -1,0 +1,38 @@
+public class ContagemNumeros {
+
+    public static void contarNumeros(int[] vetor) {
+
+        int pares = 0;
+        int impares = 0;
+        int positivos = 0;
+
+        for (int i = 0; i < vetor.length; i++) {
+
+            if (vetor[i] % 2 == 0) {
+                pares++;
+            } else {
+                impares++;
+            }
+
+            if (vetor[i] > 0) {
+                positivos++;
+            }
+        }
+
+        System.out.println("Pares: " + pares);
+        System.out.println("Ímpares: " + impares);
+        System.out.println("Positivos: " + positivos);
+    }
+
+    public static void main(String[] args) {
+
+        int[] vetor1 = {1, 2, 3};
+        contarNumeros(vetor1);
+
+        int[] vetor2 = {10, 20, 30, -1, -2, -3};
+        contarNumeros(vetor2);
+
+        int[] vetor3 = {1, 1, 1};
+        contarNumeros(vetor3);
+    }
+}
