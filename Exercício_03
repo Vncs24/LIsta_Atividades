@@ -1,0 +1,27 @@
+public class InverterNumero {
+
+    public static int inverter(int n) {
+
+        if (n < 0) {
+            return n;
+        }
+
+        int invertido = 0;
+
+        while (n > 0) {
+            int digito = n % 10;
+            invertido = invertido * 10 + digito;
+            n = n / 10;
+        }
+
+        return invertido;
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println(inverter(789));
+        System.out.println(inverter(1005));
+        System.out.println(inverter(-20));
+
+    }
+}
